@@ -1,0 +1,419 @@
+@import url("https://fonts.googleapis.com/css?family=Barlow|Neuton");
+html,
+body {
+  width: 100%;
+  margin: 0;
+  font-family: "Neuton", serif;
+  background-color: lemonchiffon; }
+
+main {
+  margin-bottom: 4em; }
+  @media screen and (min-width: 1300px) {
+    main {
+      margin-bottom: 0; } }
+
+span {
+  font-size: 1.6em;
+  color: yellow; }
+
+p {
+  font-size: 1.3em; }
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Barlow", sans-serif;
+  text-align: center; }
+
+h2 {
+  margin-top: 0;
+  padding-top: .5em;
+  font-size: 2em;
+  color: white; }
+
+h4 {
+  font-size: 1.2em;
+  padding: .8em;
+  margin-top: 0; }
+
+ul {
+  list-style: none;
+  padding-left: 0; }
+
+a {
+  text-decoration: none; }
+
+li:hover a {
+  color: #0c041b; }
+
+@media screen and (min-width: 1100px) {
+  .wrap-all {
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    flex-direction: column; }
+    .wrap-all .flex {
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-box;
+      display: flex;
+      overflow: hidden; }
+    .wrap-all .no-sidebar {
+      -webkit-flex-direction: column;
+      -moz-flex-direction: column;
+      flex-direction: column; }
+    .wrap-all .sidebar {
+      -webkit-box-ordinal-group: 1;
+      -moz-box-ordinal-group: 1;
+      -ms-flex-order: 1;
+      -webkit-order: 1;
+      order: 1;
+      -webkit-flex: 0 0 20em;
+      -ms-flex: 0 0 20em;
+      flex: 0 0 20em;
+      -webkit-transition: flex 0.5s ease, color 0.2s ease-in 0.3s;
+      -moz-transition: flex 0.5s ease, color 0.2s ease-in 0.3s;
+      transition: flex 0.5s ease, color 0.2s ease-in 0.3s; }
+    .wrap-all .sidebar-left {
+      -webkit-box-ordinal-group: 0;
+      -moz-box-ordinal-group: 0;
+      -ms-flex-order: 0;
+      -webkit-order: 0;
+      order: 0; }
+    .wrap-all .hide-sidebar {
+      -webkit-flex: 0 0 0;
+      -ms-flex: 0 0 0;
+      flex: 0 0 0;
+      color: rgba(0, 0, 0, 0);
+      -webkit-transition: color 0.2s ease, flex 0.5s ease 0.3s;
+      -moz-transition: color 0.2s ease, flex 0.5s ease 0.3s;
+      transition: color 0.2s ease, flex 0.5s ease 0.3s; }
+      .wrap-all .hide-sidebar h2, .wrap-all .hide-sidebar p, .wrap-all .hide-sidebar span {
+        color: rgba(0, 0, 0, 0); } }
+
+header {
+  background-image: url("images/cover-pictures/Cherry-l.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 650px;
+  text-align: center;
+  position: relative;
+  overflow: hidden; }
+  header .logo {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    top: 2em;
+    left: 1em; }
+  header a {
+    color: white;
+    line-height: 2;
+    font-size: 1.5em; }
+  @media screen and (min-width: 768px) {
+    header {
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-box;
+      display: flex;
+      -webkit-flex-direction: column;
+      -moz-flex-direction: column;
+      flex-direction: column;
+      height: 400px;
+      background-position: center; }
+      header .content {
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-box;
+        display: flex;
+        width: 80%;
+        margin: 2em auto; }
+      header .weather {
+        -webkit-flex: 0 0 15em;
+        -ms-flex: 0 0 15em;
+        flex: 0 0 15em; }
+      header nav {
+        width: 50%;
+        margin: 0 auto; }
+      header ul {
+        margin-top: -.8em; } }
+  @media screen and (min-width: 992px) {
+    header {
+      background-position: right;
+      height: 500px; }
+      header nav {
+        width: 100%; }
+      header ul {
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-box;
+        display: flex;
+        -webkit-justify-content: flex-start;
+        -moz-justify-content: flex-start;
+        justify-content: flex-start;
+        margin-right: 2em; }
+      header li {
+        margin-right: 2em; }
+      header img {
+        width: 100px;
+        height: 100px; } }
+  @media screen and (min-width: 1200px) {
+    header {
+      height: 600px; } }
+
+.weather {
+  border: 2px solid white;
+  max-width: 250px;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.685);
+  padding-bottom: .5em; }
+  .weather h3 {
+    background-color: rgba(255, 0, 0, 0.603);
+    margin-top: 0;
+    padding: 1em;
+    color: yellow; }
+  .weather input {
+    border: none;
+    margin-bottom: 1em;
+    padding: .5em; }
+  .weather button {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 1em;
+    color: yellow;
+    background-color: red;
+    padding: .5em;
+    font-weight: bold; }
+  .weather button:hover {
+    cursor: pointer; }
+
+.weather-result {
+  font-size: 1.3em;
+  color: white; }
+  .weather-result p {
+    margin: 0;
+    padding: .3em; }
+  .weather-result img {
+    width: 40px;
+    height: 40px; }
+
+.weather-error {
+  font-size: 1.3em;
+  color: white; }
+
+.sidebar-switcher {
+  display: none; }
+  @media screen and (min-width: 1100px) {
+    .sidebar-switcher {
+      display: inline;
+      position: absolute;
+      right: 5em;
+      bottom: 2em; }
+      .sidebar-switcher a {
+        padding: .4em; } }
+
+.sidebar {
+  background-color: rgba(165, 42, 42, 0.89);
+  color: white;
+  line-height: 1.5;
+  overflow: hidden; }
+  .sidebar .about-content {
+    padding: 1em; }
+  @media screen and (min-width: 1100px) {
+    .sidebar .cover-photo {
+      height: 100%;
+      background: url("images/cover-pictures/how-to-pit-cherries-michal-grosicki-unsplash.jpg") no-repeat left bottom;
+      background-size: cover; } }
+
+#products h2 {
+  color: black; }
+@media screen and (min-width: 1100px) {
+  #products {
+    width: 90%;
+    margin: 0 auto; } }
+
+.products-wrapper article {
+  width: 80%;
+  margin: 1em auto;
+  text-align: center;
+  background-color: white; }
+.products-wrapper img {
+  width: 100%;
+  display: block; }
+.products-wrapper h4 {
+  color: yellow;
+  background-color: rgba(165, 42, 42, 0.89);
+  margin-bottom: 0; }
+@media screen and (min-width: 560px) {
+  .products-wrapper {
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    justify-content: center;
+    flex-wrap: -webkit-flex-wrap;
+    flex-wrap: -moz-flex-wrap;
+    flex-wrap: wrap; }
+    .products-wrapper article {
+      width: 40%;
+      -webkit-transition: width 0.5s ease-out;
+      -moz-transition: width 0.5s ease-out;
+      transition: width 0.5s ease-out; } }
+@media screen and (min-width: 800px) {
+  .products-wrapper article {
+    width: 30%; } }
+@media screen and (min-width: 1200px) {
+  .products-wrapper article {
+    width: 23%; } }
+@media screen and (min-width: 1500px) {
+  .products-wrapper article {
+    width: calc(20% - 1em); } }
+
+.products-text {
+  padding: 1em;
+  text-align: center;
+  margin-bottom: 2em;
+  line-height: 1.5; }
+  .products-text p {
+    font-weight: bold;
+    color: black; }
+
+.types-text {
+  background: -moz-linear-gradient(red, orange);
+  background: -webkit-linear-gradient(red, orange);
+  background: linear-gradient(red, orange);
+  color: white;
+  padding: 1em;
+  text-align: center; }
+
+#cherry-types {
+  margin-top: 6em; }
+  #cherry-types h3 {
+    font-size: 2em;
+    margin-top: 2em; }
+  @media screen and (min-width: 1100px) {
+    #cherry-types {
+      width: 90%;
+      margin: 0 auto;
+      margin-top: 6em; } }
+
+.types-wrapper {
+  margin-top: 5em; }
+  .types-wrapper article {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center; }
+  .types-wrapper h4 {
+    background: -moz-linear-gradient(red, orange);
+    background: -webkit-linear-gradient(red, orange);
+    background: linear-gradient(red, orange);
+    margin-top: 0;
+    padding: .8em; }
+  .types-wrapper img {
+    width: 100%;
+    display: block; }
+  @media screen and (min-width: 560px) {
+    .types-wrapper {
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-box;
+      display: flex;
+      -webkit-justify-content: center;
+      -moz-justify-content: center;
+      justify-content: center;
+      flex-wrap: -webkit-flex-wrap;
+      flex-wrap: -moz-flex-wrap;
+      flex-wrap: wrap; }
+      .types-wrapper article {
+        width: calc(33% - .5em);
+        -webkit-transition: width 0.5s ease-out;
+        -moz-transition: width 0.5s ease-out;
+        transition: width 0.5s ease-out; } }
+  @media screen and (min-width: 992px) {
+    .types-wrapper article {
+      width: calc(25% - 1em); } }
+  @media screen and (min-width: 992px) {
+    .types-wrapper article {
+      width: calc(25% - 1em); } }
+  @media screen and (min-width: 1300px) {
+    .types-wrapper article {
+      width: calc(20% - 1em); } }
+
+#footer {
+  background-color: rgba(77, 3, 3, 0.74);
+  color: white;
+  text-align: center; }
+  #footer p {
+    color: #0c041b; }
+
+.footer-cover img {
+  display: none; }
+
+.footer-lists {
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  justify-content: space-between;
+  flex-wrap: -webkit-flex-wrap;
+  flex-wrap: -moz-flex-wrap;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #0c041b; }
+  .footer-lists .contact, .footer-lists .company, .footer-lists .technology {
+    width: 33%; }
+  .footer-lists p {
+    margin-top: 0;
+    font-size: 1.4em; }
+  .footer-lists ul {
+    text-align: center;
+    margin-top: 0;
+    padding-top: 2em; }
+  .footer-lists a {
+    color: white;
+    font-size: 1.1em;
+    line-height: 1.6; }
+  .footer-lists li:hover a {
+    background-color: #0c041b;
+    padding: .5em 2em;
+    font-size: 1.5em;
+    color: white; }
+  @media screen and (min-width: 1100px) {
+    .footer-lists .contact, .footer-lists .company, .footer-lists .technology, .footer-lists .footer-cover {
+      width: 25%; }
+    .footer-lists img {
+      display: block;
+      width: 100%; } }
+  @media screen and (min-width: 1600px) {
+    .footer-lists .contact, .footer-lists .company, .footer-lists .technology {
+      width: 28%; }
+    .footer-lists .footer-cover {
+      width: 15%; }
+    .footer-lists img {
+      display: block;
+      width: 100%; } }
+
+.footer-text {
+  text-align: center;
+  padding: .5em; }
+  .footer-text p {
+    font-size: 1.1em; }
+    @media screen and (min-width: 992px) {
+      .footer-text p {
+        font-size: 1.4em; } }
+
+/*# sourceMappingURL=style.css.map */

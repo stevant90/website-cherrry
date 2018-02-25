@@ -1,0 +1,46 @@
+.wrap-all {
+
+    @media screen and (min-width: 1100px) {
+        
+        @include flex-box;
+        @include flex-direction(column);
+      
+    .flex {
+
+        @include flex-box;
+        overflow: hidden;
+    }
+    
+    .no-sidebar {
+        
+        @include flex-direction(column);        
+    }
+
+    .sidebar {
+
+        @include flex-order(1);
+        @include flex(0 0 20em);
+        @include transition(flex .5s ease, color .2s ease-in .3s);
+        
+    }
+
+    .sidebar-left {
+       
+        @include flex-order(0);
+
+    }
+
+    .hide-sidebar {
+
+        @include flex(0 0 0);
+        color: $faded-text;
+        @include transition(color .2s ease, flex .5s ease .3s);
+
+        h2, p, span {
+
+            color: $faded-text;
+            
+        }
+    }
+  }
+}

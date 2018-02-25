@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow|Neuton');
+
+$text-font: 'Neuton', serif;
+$head-font: 'Barlow', sans-serif;
+$anchor-letter-color: white; 
+$span-title-color: yellow;
+$btn-color: red;
+$weather-card-color: rgba(0, 0, 0, 0.685);
+$weather-h3-background: rgba(255, 0, 0, 0.603);
+$h4-about-background: rgba(165, 42, 42, 0.89);
+$body-background: lemonchiffon;
+$color1: red;
+$color2: orange;
+$footer-color: rgba(77, 3, 3, 0.74);
+$footer-letter: rgb(12, 4, 27);
+$faded-text: hsla(0, 0%, 0%, 0); 
+
+
+
+@mixin background ($color1, $color2) {
+
+    background: -moz-linear-gradient( $color1, $color2);
+    background: -webkit-linear-gradient($color1, $color2);
+    background: linear-gradient( $color1, $color2);
+
+}
+
+@mixin flex-box {
+
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+}
+
+@mixin flex ($units) {
+
+    -webkit-flex: $units;
+    -ms-flex: $units;
+    flex: $units;
+}
+
+@mixin flex-wrap {
+
+    flex-wrap: -webkit-flex-wrap;
+    flex-wrap: -moz-flex-wrap;
+    flex-wrap: wrap; 
+}
+
+@mixin justify-content ($justify) {
+
+    -webkit-justify-content: $justify;
+    -moz-justify-content: $justify;
+    justify-content: $justify;
+    
+}
+
+@mixin flex-direction ($direction) {
+
+    -webkit-flex-direction: $direction;
+    -moz-flex-direction: $direction;
+    flex-direction: $direction;
+
+}
+
+@mixin flex-order ($value) {
+
+    -webkit-box-ordinal-group: $value;
+    -moz-box-ordinal-group: $value;
+    -ms-flex-order: $value;
+    -webkit-order: $value;
+    order: $value;
+}
+
+
+@mixin transition($value1, $value2) {
+
+    @if $value2 == undefined {
+
+        -webkit-transition: $value1;
+        -moz-transition: $value1;
+         transition: $value1;
+
+    } @else {
+
+        -webkit-transition: $value1, $value2;
+        -moz-transition: $value1, $value2;
+         transition: $value1, $value2;
+
+    }
+}

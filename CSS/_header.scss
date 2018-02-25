@@ -1,0 +1,176 @@
+header {
+
+    background-image: url("images/cover-pictures/Cherry-l.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 650px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+
+    .logo {
+
+        width: 70px;
+        height: 70px;
+        position: absolute;
+        top: 2em;
+        left: 1em;    
+    }
+
+    a {
+
+        color: $anchor-letter-color;
+        line-height: 2;
+        font-size: 1.5em;
+    }
+
+    @media screen and (min-width: 768px) {
+        
+        @include flex-box;
+        @include flex-direction(column);
+        height: 400px;
+        background-position: center;
+
+        .content {
+
+            @include flex-box;
+            width: 80%;
+            margin: 2em auto;
+        }
+
+        .weather {
+
+            @include flex(0 0 15em);
+        }
+
+        nav {
+
+            width: 50%;
+            margin: 0 auto; 
+        }
+
+        ul {
+
+            margin-top: -.8em;
+        }
+    }
+
+    @media screen and (min-width: 992px) {
+
+        background-position: right;
+        height: 500px;
+        
+        nav {
+
+            width: 100%;
+        }
+
+        ul {
+
+            @include flex-box;
+            @include justify-content(flex-start);
+            margin-right: 2em;
+        }
+
+        li {
+
+            margin-right: 2em;
+        }
+
+        img {
+
+            width: 100px;
+            height: 100px;
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        
+        height: 600px;
+    }
+}
+
+.weather {
+
+    border: 2px solid $anchor-letter-color;
+    max-width: 250px;
+    margin: 0 auto;
+    background-color: $weather-card-color;
+    padding-bottom: .5em;
+ 
+    h3 {
+
+        background-color: $weather-h3-background;
+        margin-top: 0;
+        padding: 1em;
+        color: $span-title-color;
+        
+    }
+
+    input {
+
+        border: none;
+        margin-bottom: 1em;
+        padding: .5em;
+    }
+
+    button {
+
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 1em;
+        color: $span-title-color;
+        background-color: $btn-color;
+        padding: .5em;
+        font-weight: bold;
+    }
+
+    button:hover {
+
+        cursor: pointer;
+    }
+}
+
+.weather-result {
+    
+    font-size: 1.3em;
+    color: $anchor-letter-color;
+
+    p {
+
+        margin: 0;  
+        padding: .3em;
+    }
+
+    img {
+
+        width: 40px;
+        height: 40px;
+    }
+}
+
+.weather-error {
+
+    font-size: 1.3em;
+    color: $anchor-letter-color;
+}
+
+.sidebar-switcher {
+
+    display: none;
+    
+    @media screen and (min-width: 1100px) {
+        
+        display: inline;
+        position: absolute;
+        right: 5em;
+        bottom: 2em;
+        
+        
+        a {
+            
+            padding: .4em;
+        } 
+    }
+}
+

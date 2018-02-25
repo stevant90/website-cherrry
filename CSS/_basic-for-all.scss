@@ -1,0 +1,76 @@
+html,
+body {
+
+    width: 100%;
+    margin: 0;
+    font-family: $text-font;
+    background-color: $body-background;
+}
+
+main {
+
+    margin-bottom: 4em;
+
+    @media screen and (min-width: 1300px) {
+        
+        margin-bottom: 0;
+    }
+}
+
+span {
+
+    font-size: 1.6em;
+    color: $span-title-color;
+}
+
+p {
+
+    font-size: 1.3em;
+}
+
+h1,
+h2,
+h3,
+h4 {
+
+    font-family: $head-font;
+    text-align: center;
+}
+
+h2 {
+
+    margin-top: 0;
+    padding-top: .5em;
+    font-size: 2em;
+    color: $anchor-letter-color;   
+}
+
+h4 {
+
+    font-size: 1.2em;
+    padding: .8em;
+    margin-top: 0;
+    
+}
+
+ul {
+
+    list-style: none;
+    padding-left: 0;
+}
+
+a {
+
+    text-decoration: none;
+      
+}
+
+li:hover {
+
+    a {
+
+        color: $footer-letter;
+    }
+
+}
+
