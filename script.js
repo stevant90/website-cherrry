@@ -1,6 +1,6 @@
 (function test() {
 
-    var url = "http://api.openweathermap.org/data/2.5/weather?q=";
+    var url = "https://api.openweathermap.org/data/2.5/weather?q=";
     var apiKey = "fa5eef97bb9e490945ff17431cd3c209";
 
     var btn = document.querySelector(".show-weather");
