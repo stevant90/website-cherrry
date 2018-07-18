@@ -51,7 +51,7 @@
         var degC = response.main.temp - 272.15;
         var degCInt = Math.floor(degC);
         var condition = response.weather[0].main;
-        var icon = "http://openweathermap.org/img/w/" + response.weather[0].icon + ".png";
+        var icon = "https://openweathermap.org/img/w/" + response.weather[0].icon + ".png";
         var windSpeed = response.wind.speed;
 
         var weatherResult = document.querySelector(".weather-result");
